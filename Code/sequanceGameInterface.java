@@ -8,7 +8,8 @@ public class sequanceGameInterface implements ActionListener
 {
     public static void main(String[]args){
         sequanceGameInterface s = new sequanceGameInterface();
-        s.animation();
+        int[] order = {1,2,3};
+        s.animation(order);
     }
     
     JFrame frame = new JFrame();
@@ -102,8 +103,7 @@ public class sequanceGameInterface implements ActionListener
        }
     }
    
-    public void animation(){
-        int[] order = {1,2,3,4,5,6,7,8,9,1,6,3,6,3,6,3,7,9,5,4,7};
+    public void animation(int[] order){
         for(int i = 0; i < order.length; i++){
             
             switch(order[i]){
@@ -137,7 +137,7 @@ public class sequanceGameInterface implements ActionListener
                 }
             
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 } catch (InterruptedException ie) {
                     Thread.currentThread().interrupt();
                 }
