@@ -8,9 +8,13 @@ public class sequanceGameInterface implements ActionListener
 {
     public static void main(String[]args){
         sequanceGameInterface s = new sequanceGameInterface();
-        int[] order = {1,2,3};
+        logic l = new logic();
+        
+        int rand = l.choose();
+        
         s.animation(order);
     }
+    
     
     JFrame frame = new JFrame();
     
@@ -103,10 +107,10 @@ public class sequanceGameInterface implements ActionListener
        }
     }
    
-    public void animation(int[] order){
-        for(int i = 0; i < order.length; i++){
+    public void animation(ArrayList<Integer> order){
+        for(int i = 0; i < order.size(); i++){
             
-            switch(order[i]){
+            switch(order.get(i)){
                 case 1:
                     topLeft.setBackground(new Color(255, 255, 255));
                     break;
