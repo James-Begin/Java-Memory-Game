@@ -1,2 +1,2 @@
 # MineSweeper-in-Java
-Building the classic minesweeper game using only Java
+Building a simple memory game using only Java
