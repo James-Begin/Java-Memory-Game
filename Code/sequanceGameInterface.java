@@ -8,13 +8,9 @@ public class sequanceGameInterface implements ActionListener
 {
     public static void main(String[]args){
         sequanceGameInterface s = new sequanceGameInterface();
-        logic l = new logic();
-        
-        int rand = l.choose();
-        
+        int[] order = {1,2,3,5,7,5,6,1,9,4,6,4,5,2,1,6,6,2,3,1,4,1,6,2,4,1,6,5,2,9,3,9,1,8,3,4,3,7,2,1,9,4,6,2,3,3,3,7,1,5,2,2,3,3,7,1,7,8,6,1,8,1,8,5,7,9,6,2,9,4,7,9,4,3,8,5,1,2,1,8,9,4,8,4,6,8,3,2,3,4,3,7,8,6,5,7,7,9,9,2,8,2,5};
         s.animation(order);
     }
-    
     
     JFrame frame = new JFrame();
     
@@ -83,34 +79,46 @@ public class sequanceGameInterface implements ActionListener
         frame.getContentPane().setBackground(new Color(43, 135, 209));
         frame.setLayout(null);
         frame.setVisible(true);
+        
+        topLeft.addActionListener(this);
+        topMiddle.addActionListener(this);
+        topRight.addActionListener(this);
+        middleLeft.addActionListener(this);
+        middleMiddle.addActionListener(this);
+        middleRight.addActionListener(this);
+        bottomLeft.addActionListener(this);
+        bottomMiddle.addActionListener(this);
+        bottomRight.addActionListener(this);
+        
     }
     
     public void actionPerformed(ActionEvent e) {
        if(e.getSource() == topLeft){
-           
+           System.out.println("HELLO WORLD");
        } else if(e.getSource() == topMiddle){
-           
+           System.out.println("HELLO WORLD");
        } else if(e.getSource() == topRight){
-           
+           System.out.println("HELLO WORLD");
        } else if(e.getSource() == middleLeft){
-           
+           System.out.println("HELLO WORLD");
        } else if(e.getSource() == middleMiddle){
-           
+           System.out.println("HELLO WORLD");
        } else if(e.getSource() == middleRight){
-           
+           System.out.println("HELLO WORLD");
        } else if(e.getSource() == bottomLeft){
-           
+           System.out.println("HELLO WORLD");
        } else if(e.getSource() == bottomMiddle){
-           
+           System.out.println("HELLO WORLD");
        } else if(e.getSource() == bottomRight){
-           
+           System.out.println("HELLO WORLD");
        }
     }
    
-    public void animation(ArrayList<Integer> order){
-        for(int i = 0; i < order.size(); i++){
+    public void animation(int[] order){
+        
+        for(int i = 0; i < order.length; i++){
             
-            switch(order.get(i)){
+            switch(order[i]){
                 case 1:
                     topLeft.setBackground(new Color(255, 255, 255));
                     break;
@@ -177,6 +185,7 @@ public class sequanceGameInterface implements ActionListener
                         break;
                 }
             }
+            
     }
    
 }
