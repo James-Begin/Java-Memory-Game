@@ -21,6 +21,7 @@ public class sequanceGameLogic
                     Thread.currentThread().interrupt();
                 }
             }
+            
             do{
             nextBox = (int)(Math.random()*9)+1;
             } while(nextBox == previousBox);
