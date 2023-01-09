@@ -1,26 +1,35 @@
 import java.util.*;
 
-
-public class logic {
-    public static void main(String[] args) {
+public class sequanceGameLogic
+{
+    public static void main(String[]args){
         
-        //init arraylist to store past moves
-        ArrayList<Integer> mem = new ArrayList<Integer>();
+        boolean gameOver = false;
+        boolean success = false;
         
-        boolean fail = false;
+        int nextBox = (int)(Math.random()*9)+1;
+        ArrayList<Integer> sequance = new ArrayList<Integer>(Arrays.asList(nextBox));
+        int point = 0;
         
-        int score = 0;
-        
-        
+        while(gameOver == false){
             
+            
+            
+            while(success == false){
+                try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException ie) {
+                        Thread.currentThread().interrupt();
+                    }
+            }
+            
+            nextBox = (int)(Math.random()*9)+1;
+            sequance.add(nextBox);
+            
+            point++;
             
         }
-    public int choose() {
-        return (int)(Math.random()*3+1);
-    }
-    
-    public ArrayList<Integer> add(int rand, ArrayList<Integer> mem) {
-        mem.add(rand);
-        return mem;
+        
+        
     }
 }
