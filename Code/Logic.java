@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class sequanceGameLogic
+public class sequenceGameLogic
 {
     public static void main(String[]args){
         
@@ -8,7 +8,7 @@ public class sequanceGameLogic
         boolean success = false;
         
         int nextBox = (int)(Math.random()*9)+1;
-        ArrayList<Integer> sequance = new ArrayList<Integer>(Arrays.asList(nextBox));
+        ArrayList<Integer> sequence = new ArrayList<Integer>(Arrays.asList(nextBox));
         int point = 0;
         
         while(gameOver == false){
@@ -24,7 +24,7 @@ public class sequanceGameLogic
             }
             
             nextBox = (int)(Math.random()*9)+1;
-            sequance.add(nextBox);
+            sequence.add(nextBox);
             
             point++;
             
