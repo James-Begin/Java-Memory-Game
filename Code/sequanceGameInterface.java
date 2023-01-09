@@ -104,24 +104,24 @@ public class sequenceGameInterface implements ActionListener
             c.check(l.sequence, 2);
         } else if(e.getSource() == topRight){
             System.out.println("HELLO WORLD");
-            c.check(l.sequence, 2);
-        } else if(e.getSource() == middleLeft){
             c.check(l.sequence, 3);
-            System.out.println("HELLO WORLD");
-        } else if(e.getSource() == middleMiddle){
+        } else if(e.getSource() == middleLeft){
             c.check(l.sequence, 4);
             System.out.println("HELLO WORLD");
-        } else if(e.getSource() == middleRight){
+        } else if(e.getSource() == middleMiddle){
             c.check(l.sequence, 5);
             System.out.println("HELLO WORLD");
-        } else if(e.getSource() == bottomLeft){
+        } else if(e.getSource() == middleRight){
             c.check(l.sequence, 6);
             System.out.println("HELLO WORLD");
-        } else if(e.getSource() == bottomMiddle){
+        } else if(e.getSource() == bottomLeft){
             c.check(l.sequence, 7);
             System.out.println("HELLO WORLD");
-        } else if(e.getSource() == bottomRight){
+        } else if(e.getSource() == bottomMiddle){
             c.check(l.sequence, 8);
+            System.out.println("HELLO WORLD");
+        } else if(e.getSource() == bottomRight){
+            c.check(l.sequence, 9);
             System.out.println("HELLO WORLD");
         }
     }
