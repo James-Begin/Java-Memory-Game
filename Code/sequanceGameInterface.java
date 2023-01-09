@@ -6,6 +6,8 @@ import javafx.scene.layout.*;
 
 public class sequenceGameInterface implements ActionListener
 {
+    sequenceGameCheck c = new sequenceGameCheck();
+    sequenceGameLogic l = new sequenceGameLogic();
     public static void main(String[]args){
         sequenceGameInterface s = new sequenceGameInterface();
         
@@ -94,42 +96,41 @@ public class sequenceGameInterface implements ActionListener
     }
     
     public void actionPerformed(ActionEvent e) {
-        int pressed = -1;
         if(e.getSource() == topLeft){
             System.out.println("HELLO WORLD");
-            pressed = 1;
+            c.check(l.sequence, 1);
         } else if(e.getSource() == topMiddle){
             System.out.println("HELLO WORLD");
-            pressed = 2;
+            c.check(l.sequence, 2);
         } else if(e.getSource() == topRight){
             System.out.println("HELLO WORLD");
-            pressed = 3;
+            c.check(l.sequence, 2);
         } else if(e.getSource() == middleLeft){
+            c.check(l.sequence, 3);
             System.out.println("HELLO WORLD");
-            pressed = 4;
         } else if(e.getSource() == middleMiddle){
+            c.check(l.sequence, 4);
             System.out.println("HELLO WORLD");
-            pressed = 5;
         } else if(e.getSource() == middleRight){
+            c.check(l.sequence, 5);
             System.out.println("HELLO WORLD");
-            pressed = 6;
         } else if(e.getSource() == bottomLeft){
+            c.check(l.sequence, 6);
             System.out.println("HELLO WORLD");
-            pressed = 7;
         } else if(e.getSource() == bottomMiddle){
+            c.check(l.sequence, 7);
             System.out.println("HELLO WORLD");
-            pressed = 8;
         } else if(e.getSource() == bottomRight){
+            c.check(l.sequence, 8);
             System.out.println("HELLO WORLD");
-            pressed = 9;
         }
     }
    
-    public void animation(int[] order){
+    public void animation(ArrayList<Integer> order){
         
-        for(int i = 0; i < order.length; i++){
+        for(int i = 0; i < order.size(); i++){
             
-            switch(order[i]){
+            switch(order.get(i)){
                 case 1:
                     topLeft.setBackground(new Color(255, 255, 255));
                     break;
@@ -166,7 +167,7 @@ public class sequenceGameInterface implements ActionListener
                 }
                 
                 
-                switch(order[i]){
+                switch(order.get(i)){
                     case 1:
                         topLeft.setBackground(new Color(37, 115, 193));
                         break;
