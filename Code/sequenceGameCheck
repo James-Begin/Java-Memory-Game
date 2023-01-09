@@ -1,0 +1,27 @@
+import java.util.*;
+
+
+public class sequenceGameCheck {
+    
+    
+    sequenceGameInterface s = new sequenceGameInterface();
+    sequenceGameLogic l = new sequenceGameLogic();
+    
+    int move = 0;
+    
+    public boolean check (ArrayList<Integer> sequence, int square) {
+        
+        
+        if (move == sequence.size()) {
+            if (square == sequence.get(move)) {
+                move += 1;
+                return l.finished = true;
+            }
+            return l.finished = false;
+            
+        } else {
+            return l.gameOver = true;
+        }
+        
+    }
+}
