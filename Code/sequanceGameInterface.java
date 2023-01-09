@@ -4,12 +4,13 @@ import java.awt.*;
 import java.awt.event.*;
 import javafx.scene.layout.*;
 
-public class sequanceGameInterface implements ActionListener
+public class sequenceGameInterface implements ActionListener
 {
     public static void main(String[]args){
-        sequanceGameInterface s = new sequanceGameInterface();
-        int[] order = {1,2,3,5,7,5,6,1,9,4,6,4,5,2,1,6,6,2,3,1,4,1,6,2,4,1,6,5,2,9,3,9,1,8,3,4,3,7,2,1,9,4,6,2,3,3,3,7,1,5,2,2,3,3,7,1,7,8,6,1,8,1,8,5,7,9,6,2,9,4,7,9,4,3,8,5,1,2,1,8,9,4,8,4,6,8,3,2,3,4,3,7,8,6,5,7,7,9,9,2,8,2,5};
-        s.animation(order);
+        sequenceGameInterface s = new sequenceGameInterface();
+        
+        
+        
     }
     
     JFrame frame = new JFrame();
@@ -27,7 +28,7 @@ public class sequanceGameInterface implements ActionListener
     JButton bottomRight = new JButton("");
     
     
-    public sequanceGameInterface(){
+    public sequenceGameInterface(){
         topLeft.setBounds(50,50,200,200);
         topMiddle.setBounds(300,50,200,200);
         topRight.setBounds(550,50,200,200);
@@ -93,25 +94,35 @@ public class sequanceGameInterface implements ActionListener
     }
     
     public void actionPerformed(ActionEvent e) {
-       if(e.getSource() == topLeft){
-           System.out.println("HELLO WORLD");
-       } else if(e.getSource() == topMiddle){
-           System.out.println("HELLO WORLD");
-       } else if(e.getSource() == topRight){
-           System.out.println("HELLO WORLD");
-       } else if(e.getSource() == middleLeft){
-           System.out.println("HELLO WORLD");
-       } else if(e.getSource() == middleMiddle){
-           System.out.println("HELLO WORLD");
-       } else if(e.getSource() == middleRight){
-           System.out.println("HELLO WORLD");
-       } else if(e.getSource() == bottomLeft){
-           System.out.println("HELLO WORLD");
-       } else if(e.getSource() == bottomMiddle){
-           System.out.println("HELLO WORLD");
-       } else if(e.getSource() == bottomRight){
-           System.out.println("HELLO WORLD");
-       }
+        int pressed = -1;
+        if(e.getSource() == topLeft){
+            System.out.println("HELLO WORLD");
+            pressed = 1;
+        } else if(e.getSource() == topMiddle){
+            System.out.println("HELLO WORLD");
+            pressed = 2;
+        } else if(e.getSource() == topRight){
+            System.out.println("HELLO WORLD");
+            pressed = 3;
+        } else if(e.getSource() == middleLeft){
+            System.out.println("HELLO WORLD");
+            pressed = 4;
+        } else if(e.getSource() == middleMiddle){
+            System.out.println("HELLO WORLD");
+            pressed = 5;
+        } else if(e.getSource() == middleRight){
+            System.out.println("HELLO WORLD");
+            pressed = 6;
+        } else if(e.getSource() == bottomLeft){
+            System.out.println("HELLO WORLD");
+            pressed = 7;
+        } else if(e.getSource() == bottomMiddle){
+            System.out.println("HELLO WORLD");
+            pressed = 8;
+        } else if(e.getSource() == bottomRight){
+            System.out.println("HELLO WORLD");
+            pressed = 9;
+        }
     }
    
     public void animation(int[] order){
