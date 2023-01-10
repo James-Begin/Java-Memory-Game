@@ -6,12 +6,9 @@ import javafx.scene.layout.*;
 
 public class sequenceGameInterface implements ActionListener
 {
-    sequenceGameCheck c = new sequenceGameCheck();
-    sequenceGameLogic l = new sequenceGameLogic();
+    sequenceGameCheck check = new sequenceGameCheck();
     public static void main(String[]args){
         sequenceGameInterface s = new sequenceGameInterface();
-        
-        
         
     }
     
@@ -98,30 +95,30 @@ public class sequenceGameInterface implements ActionListener
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == topLeft){
             System.out.println("HELLO WORLD");
-            c.check(l.sequence, 1);
+            check.check(1);
         } else if(e.getSource() == topMiddle){
             System.out.println("HELLO WORLD");
-            c.check(l.sequence, 2);
+            check.check(2);
         } else if(e.getSource() == topRight){
             System.out.println("HELLO WORLD");
-            c.check(l.sequence, 3);
+            check.check(3);
         } else if(e.getSource() == middleLeft){
-            c.check(l.sequence, 4);
+            check.check(4);
             System.out.println("HELLO WORLD");
         } else if(e.getSource() == middleMiddle){
-            c.check(l.sequence, 5);
+            check.check(5);
             System.out.println("HELLO WORLD");
         } else if(e.getSource() == middleRight){
-            c.check(l.sequence, 6);
+            check.check(6);
             System.out.println("HELLO WORLD");
         } else if(e.getSource() == bottomLeft){
-            c.check(l.sequence, 7);
+            check.check(7);
             System.out.println("HELLO WORLD");
         } else if(e.getSource() == bottomMiddle){
-            c.check(l.sequence, 8);
+            check.check(8);
             System.out.println("HELLO WORLD");
         } else if(e.getSource() == bottomRight){
-            c.check(l.sequence, 9);
+            check.check(9);
             System.out.println("HELLO WORLD");
         }
     }
