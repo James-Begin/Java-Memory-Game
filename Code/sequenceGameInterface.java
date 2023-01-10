@@ -7,10 +7,6 @@ import javafx.scene.layout.*;
 public class sequenceGameInterface implements ActionListener
 {
     sequenceGameCheck check = new sequenceGameCheck();
-    public static void main(String[]args){
-        sequenceGameInterface s = new sequenceGameInterface();
-        
-    }
     
     JFrame frame = new JFrame();
     
