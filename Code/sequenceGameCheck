@@ -3,24 +3,24 @@ import java.util.*;
 
 public class sequenceGameCheck {
     
+    int sequenceNum = 1;
     
-    sequenceGameInterface s = new sequenceGameInterface();
-    sequenceGameLogic l = new sequenceGameLogic();
+    public void check (int square) {
     
-    int move = 0;
-    
-    public boolean check (ArrayList<Integer> sequence, int square) {
+        if (sequenceNum == sequenceGameLogic.sequence.size()) {
+            sequenceGameLogic.finished = true;
+            sequenceNum = 0;
+            return;
+        } 
         
-        
-        if (move == sequence.size()) {
-            if (square == sequence.get(move)) {
-                move += 1;
-                return l.finished = true;
-            }
-            return l.finished = false;
-            
+        if (square == sequenceGameLogic.sequence.get(sequenceNum-1)) {
+            sequenceNum += 1;
+            sequenceGameLogic.finished = false;
+            return;
         } else {
-            return l.gameOver = true;
+            sequenceGameLogic.gameOver = true;
+            sequenceGameLogic.finished = true;
+            return;
         }
         
     }
