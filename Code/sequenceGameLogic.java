@@ -29,9 +29,7 @@ public class sequenceGameLogic
             point+=1;
             
             gui.animation(sequence);
-            
-            System.out.println(sequence);
-            
+                        
             finished = false;
             
             while(finished == false){
@@ -40,6 +38,12 @@ public class sequenceGameLogic
                     } catch (InterruptedException ie) {
                         Thread.currentThread().interrupt();
                     }
+            }
+            
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
             }
             
         }
