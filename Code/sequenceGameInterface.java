@@ -90,32 +90,23 @@ public class sequenceGameInterface implements ActionListener
     
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == topLeft){
-            System.out.println("HELLO WORLD");
             check.check(1);
         } else if(e.getSource() == topMiddle){
-            System.out.println("HELLO WORLD");
             check.check(2);
         } else if(e.getSource() == topRight){
-            System.out.println("HELLO WORLD");
             check.check(3);
         } else if(e.getSource() == middleLeft){
             check.check(4);
-            System.out.println("HELLO WORLD");
         } else if(e.getSource() == middleMiddle){
             check.check(5);
-            System.out.println("HELLO WORLD");
         } else if(e.getSource() == middleRight){
             check.check(6);
-            System.out.println("HELLO WORLD");
         } else if(e.getSource() == bottomLeft){
             check.check(7);
-            System.out.println("HELLO WORLD");
         } else if(e.getSource() == bottomMiddle){
             check.check(8);
-            System.out.println("HELLO WORLD");
         } else if(e.getSource() == bottomRight){
             check.check(9);
-            System.out.println("HELLO WORLD");
         }
     }
    
