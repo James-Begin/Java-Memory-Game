@@ -3,19 +3,18 @@ import java.util.*;
 
 public class sequenceGameCheck {
     
-    int sequenceNum = 1;
+    int sequenceNum = 0;
     
     public void check (int square) {
-    
-        if (sequenceNum == sequenceGameLogic.sequence.size()) {
-            sequenceGameLogic.finished = true;
-            sequenceNum = 0;
-            return;
-        } 
+     
         
-        if (square == sequenceGameLogic.sequence.get(sequenceNum-1)) {
+        if (square == sequenceGameLogic.sequence.get(sequenceNum)) {
             sequenceNum += 1;
             sequenceGameLogic.finished = false;
+            if (sequenceNum == sequenceGameLogic.sequence.size()) {
+                sequenceGameLogic.finished = true;
+                sequenceNum = 0;
+            }
             return;
         } else {
             sequenceGameLogic.gameOver = true;
