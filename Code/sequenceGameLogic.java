@@ -6,11 +6,30 @@ public class sequenceGameLogic
     
     sequenceGameInterface gui = new sequenceGameInterface();
     
+    
     int point = 0;
     
     static boolean gameOver = false;
     static boolean finished = false;
     
+    public void startScreen(){
+        gui.graphicInterface();
+        while(gui.started == false){
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+            }
+        }
+        
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
+        
+        running();
+    }
     
     public void running() {
     
