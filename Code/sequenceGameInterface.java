@@ -4,26 +4,30 @@ import java.awt.*;
 import java.awt.event.*;
 import javafx.scene.layout.*;
 
-public class sequenceGameInterface implements ActionListener
+public class sequenceGameInterface extends JFrame implements ActionListener
 {
     sequenceGameCheck check = new sequenceGameCheck();
     
     JFrame frame = new JFrame();
     
     boolean started = false;
-    JButton startButton = new JButton("Click to Start");
-    
+    JButton[] startButtons = new JButton[2];
+
     JButton[][] buttonGrid = new JButton[3][3];
     
     public void graphicInterface(){
         System.out.println(started);
-        
+        frame.setVisible(true);
         if(started == false){
             
-            startButton.setBounds(300,300,200,200);
-            startButton.setBackground(new Color(37, 115, 193));
-            startButton.setBorderPainted(false);
-            frame.add(startButton);
+            startButtons[0] = new JButton("Start");
+            startButtons[1] = new JButton("Exit");
+            
+            
+            startButtons[0].setBounds(300,300,200,200);
+            startButtons[0].setBackground(new Color(37, 115, 193));
+            startButtons[0].setBorderPainted(false);
+            frame.add(startButtons[0]);
             
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(800,825);
@@ -31,10 +35,10 @@ public class sequenceGameInterface implements ActionListener
             frame.setLayout(null);
             frame.setVisible(true);
             
-            startButton.addActionListener(this);
+            startButtons[0].addActionListener(this);
             
         } else if(started == true){  
-            startButton.setVisible(false);
+            startButtons[0].setVisible(false);
             
             for(int i = 0; i < buttonGrid.length; i++){
                 for(int j = 0; j < buttonGrid.length; j++){
@@ -56,7 +60,7 @@ public class sequenceGameInterface implements ActionListener
     }
     
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == startButton){
+        if(e.getSource() == startButtons[0]){
             started = true;
             graphicInterface();
         }
