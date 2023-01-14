@@ -3,7 +3,7 @@ public class mainSequence
     //create an object of the logic class
     static sequenceGameLogic start = new sequenceGameLogic();
     public static void main(String[]args){
-        
+        //call the start method to start the game
         start();
     }
     public static void start() {
