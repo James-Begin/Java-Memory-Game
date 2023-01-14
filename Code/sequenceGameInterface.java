@@ -108,6 +108,7 @@ public class sequenceGameInterface extends JFrame implements ActionListener
             }
         }
     }
+    
     //The animation method displays the pattern by changing the colour of certain squares
     //this method accepts an ArrayList with Integers and does not return anything
     public void animation(ArrayList<Integer> order){
@@ -184,8 +185,7 @@ public class sequenceGameInterface extends JFrame implements ActionListener
                 
                 }
             }
-            frame.setVisible(false);
-            frame.setVisible(true); 
+            
     }
    
 }
