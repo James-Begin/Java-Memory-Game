@@ -1,6 +1,3 @@
-
-
-
 public class sequenceGameCheck {
     //Initialize the current number in the repeating sequence
     int sequenceNum = 0;

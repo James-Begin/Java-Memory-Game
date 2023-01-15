@@ -29,7 +29,7 @@ public class sequenceGameInterface extends JFrame implements ActionListener
             startButtons[1] = new JButton("Exit");
             
             //Create the title of the game
-            title.setBounds(180,100,400,100);
+            title.setBounds(180,100,390,100);
             title.setText("Sequence Memory");
             title.setFont(new Font("Serif", Font.PLAIN, 50));
             title.setBackground(new Color(37, 115, 193));
